@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+<!-- 同过JNDI技术绑定连接池到tomcat服务器  -->
+	<Resource name="jdbc/webdb" auth="Container"
+		type="javax.sql.DataSource" driverClassName="oracle.jdbc.driver.OracleDriver"
+		url="jdbc:oracle:thin://localhost:1521/orcl"
+		username="my12306" password="123456" maxActive="50" maxIdle="5"
+		maxWait="3000" />
+</Context>
+<!-- <Context>
+	<Resource name="jdbc/pgsql" type="javax.sql.DataSource" driverClassName="org.postgresql.Driver"
+		url="jdbc:postgresql://10.14.196.190:5432/foo"
+		username="sdbadmin"
+		password="sdbadmin"
+		factory="org.apache.tomcat.jdbc.pool..DataSourceFactory"
+		maxActive="600"
+		maxIdle="600"
+		minIdle="600"
+		initialSize="400"
+		timeBetweenEvictionRunsMillis="30000"
+		minEvictableIdleTimeMillis="1800000"
+		removeAbandoned="true"
+		removeAbandonedTimeout="180"
+		testOnBorrow="true"
+		maxWait="300000"
+		logAbandoned="true"
+		testOnReturn="false"
+		validationQuery="SELECT 1"
+	/> 
+</Context> -->
