@@ -120,6 +120,8 @@ public class LoginServlet<UserinfoService> extends HttpServlet {
 			}
 			else {//登录失败返回登录页面
 				request.getRequestDispatcher("Login.jsp").forward(request, response);
+				
+
 			}
 		
 		}
